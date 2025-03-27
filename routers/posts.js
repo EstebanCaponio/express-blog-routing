@@ -8,8 +8,16 @@ router.get('/', function (req, res) {
 });
 // show
 router.get('/:id', function (req, res) {
-    // res.send('Dettagli della ricetta ' + req.params.id);
-    res.json(posts[0]);
+   
+let result = 'ricetta non trovata';
+
+    posts.forEach((element) => {
+
+        if(element.slug === req.params.id){
+            result = element
+        }
+    });
+    res.json(result);
 });
 // store
 router.post('/', function (req, res) {
