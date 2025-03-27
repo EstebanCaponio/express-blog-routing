@@ -1,7 +1,6 @@
 // collllego express
 const express = require('express');
-// collego postsArray e posts nella cartella router
-const posts=require('./postsArray');
+//collego posts nella cartella router
 const router=require('./routers/posts');
 const app = express();
 const port = 4000;
